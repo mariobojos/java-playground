@@ -13,7 +13,10 @@ public class App
     {
         System.out.println( "Parse Calendar with ICS format");
         CalendarParser cp = new CalendarParser(Calendar.entry);
+        //System.out.println(Calendar.entry);
         String events = cp.parseCalendar();
+
+        System.out.println("AFTER PARSING ....");
         System.out.println(events);
     }
 }
