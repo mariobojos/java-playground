@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.calendarparsing.Calendar;
+import org.example.calendarparsing.CalendarHomepage;
 import org.example.calendarparsing.CalendarParser;
 
 /**
@@ -13,10 +14,12 @@ public class App
     {
         System.out.println( "Parse Calendar with ICS format");
         CalendarParser cp = new CalendarParser(Calendar.entry);
-        //System.out.println(Calendar.entry);
-        String events = cp.parseCalendar();
+        CalendarParser cpHome = new CalendarParser(CalendarHomepage.HOMEPAGE_CALENDAR_RESOURCES);
 
-        System.out.println("AFTER PARSING ....");
-        System.out.println(events);
+//        System.out.println("AFTER PARSING ....");
+//        System.out.println(events);
+
+        System.out.println(cp.parseCalendar());
+        //System.out.println(cpHome.parseCalendar());
     }
 }
